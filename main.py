@@ -6,9 +6,9 @@ new_dict = {row.letter: row.code for index, row in nato_data_frame.iterrows()}
 
 
 def nato_spelling():
+    word = input("Enter your word: ").upper()
     nato_letters = ""
     try:
-        word = input("Enter your word: ").upper()
         nato_letters = [new_dict[letter] for letter in word]
     except KeyError:
         print("Sorry, only letters in the alphabet please.")
