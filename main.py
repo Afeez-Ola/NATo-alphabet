@@ -3,6 +3,8 @@ import pandas
 nato_data_frame = pandas.read_csv("nato_phonetic_alphabet.csv")
 
 new_dict = {row.letter: row.code for index, row in nato_data_frame.iterrows()}
+
+
 def nato_spelling():
     nato_letters = ""
     try:
@@ -13,10 +15,5 @@ def nato_spelling():
         nato_spelling()
     print(nato_letters)
 
+
 nato_spelling()
-
-
-
-
-
-
